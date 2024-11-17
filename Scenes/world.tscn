@@ -57,4 +57,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.814649, 0.0791236, -19.020
 [node name="Velocity_Label" type="Label" parent="CanvasLayer"]
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_font_sizes/font_size = 29
 text = "Speed: 0"

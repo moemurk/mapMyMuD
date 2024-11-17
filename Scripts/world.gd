@@ -7,4 +7,4 @@ extends Node3D
 func _process(delta):
 	if nissan_gtr and nissan_gtr is VehicleBody3D:
 		var speed = nissan_gtr.linear_velocity.length() #speed in m/s
-		velocity_label.text = "Speed: " + str(round(speed * 10) / 10) + "m/s"
+		velocity_label.text = "Speed: " + str(round(speed * 3.6 * 10) / 10) + "km/h"

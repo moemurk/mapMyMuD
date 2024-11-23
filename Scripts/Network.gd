@@ -46,6 +46,7 @@ func _on_disconnected_to_server():
 var clients: Array[Client] = []
 var game_state: GameState = GameState.Waiting
 var teams: Array = []
+var cars: Array[VehicleBody3D] = []
 
 enum GameState {
 	Waiting,
@@ -68,26 +69,23 @@ func server_regist_client(client_id: int, player_name: String, roll: Client.Play
 		# we should seperate the players into different teams here
 		teams = make_teams()
 		game_state = GameState.Running
-		load_map.rpc(teams)
+		var teams_str = []
+		for team in teams:
+			teams_str.append(var_to_str(team))
+		load_map.rpc(teams_str)
 
 func make_teams() -> Array:
 	var drivers = []
 	var observers = []
 	var teams = []
-	print("start to loop clients")
 	for c in clients:
-		print(c)
 		match c._roll:
 			Client.PlayRoll.Driver:
 				drivers.append(c)
 			Client.PlayRoll.Observer:
 				observers.append(c)
-	print("after loop")
-	print(drivers)
-	print(observers)
 	for i in range(mini(drivers.size(), observers.size())):
 		teams.append([drivers[i], observers[i]])
-	print(teams)
 	return teams
 
 #*************************************#
@@ -101,8 +99,12 @@ func register_clinet(player_name: String, roll: Client.PlayRoll):
 		server_regist_client(multiplayer.get_remote_sender_id(), player_name, roll)
 
 @rpc()
-func load_map(teams: Array):
+func load_map(team_strs: Array):
 	print("load_map", teams)
+	var teams = []
+	for team_str in team_strs:
+		teams.append(str_to_var(team_str))
+	self.teams = teams
 	SceneManager.change_scene("map1")
 
 @rpc("any_peer", "reliable")
@@ -116,3 +118,11 @@ func game_start():
 @rpc("any_peer", "reliable")
 func direct(direction, strength, flags):
 	pass
+
+@rpc("any_peer", "unreliable")
+func car_move(position: Vector3, rotation: Vector3):
+	var remote_id = multiplayer.get_remote_sender_id()
+	for car in cars:
+		if car.name == str(remote_id):
+			car.position = position
+			car.rotation = rotation

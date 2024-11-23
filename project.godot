@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="MapMyMud"
-run/main_scene="res://Scenes/world.tscn"
-config/features=PackedStringArray("4.4", "GL Compatibility")
+run/main_scene="res://Scenes/lobby.tscn"
+config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://Buildings/icon.svg"
+
+[autoload]
+
+Network="*res://Scripts/Network.gd"
+SceneManager="*res://Scripts/SceneManager.gd"
 
 [input]
 

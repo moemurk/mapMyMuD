@@ -19,6 +19,7 @@ config/icon="res://Buildings/icon.svg"
 
 Network="*res://Scripts/Network.gd"
 SceneManager="*res://Scripts/SceneManager.gd"
+CodriverMessage="*res://Scripts/Codriver_message.gd"
 
 [input]
 

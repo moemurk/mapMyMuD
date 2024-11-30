@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cwf7hc0lgpx6o"
+path="res://.godot/imported/road_bendSidewalk.obj-9c76af1c3e9bda707f1a779d5a990dce.mesh"
+
+[deps]
+
+files=["res://.godot/imported/road_bendSidewalk.obj-9c76af1c3e9bda707f1a779d5a990dce.mesh"]
+
+source_file="res://Assets/Roads/road_bendSidewalk.obj"
+dest_files=["res://.godot/imported/road_bendSidewalk.obj-9c76af1c3e9bda707f1a779d5a990dce.mesh", "res://.godot/imported/road_bendSidewalk.obj-9c76af1c3e9bda707f1a779d5a990dce.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

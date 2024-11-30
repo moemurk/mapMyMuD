@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bvwrgofpfcnf0"
+path="res://.godot/imported/large_buildingE.obj-563d7e20cbc2e568ccf1f60c1255995a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/large_buildingE.obj-563d7e20cbc2e568ccf1f60c1255995a.mesh"]
+
+source_file="res://Assets/Buildings/large_buildingE.obj"
+dest_files=["res://.godot/imported/large_buildingE.obj-563d7e20cbc2e568ccf1f60c1255995a.mesh", "res://.godot/imported/large_buildingE.obj-563d7e20cbc2e568ccf1f60c1255995a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

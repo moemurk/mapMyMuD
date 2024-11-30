@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dk0g4o6i4poc"
+path="res://.godot/imported/low_buildingA.obj-4af0bf32f5cb94942a1a98ac8574ccce.mesh"
+
+[deps]
+
+files=["res://.godot/imported/low_buildingA.obj-4af0bf32f5cb94942a1a98ac8574ccce.mesh"]
+
+source_file="res://Assets/Buildings/low_buildingA.obj"
+dest_files=["res://.godot/imported/low_buildingA.obj-4af0bf32f5cb94942a1a98ac8574ccce.mesh", "res://.godot/imported/low_buildingA.obj-4af0bf32f5cb94942a1a98ac8574ccce.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

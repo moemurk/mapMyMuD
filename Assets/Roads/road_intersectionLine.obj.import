@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c0rn8ygbg8c8x"
+path="res://.godot/imported/road_intersectionLine.obj-27f0f0dbfbab5bcdf37f9c36567d285e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/road_intersectionLine.obj-27f0f0dbfbab5bcdf37f9c36567d285e.mesh"]
+
+source_file="res://Assets/Roads/road_intersectionLine.obj"
+dest_files=["res://.godot/imported/road_intersectionLine.obj-27f0f0dbfbab5bcdf37f9c36567d285e.mesh", "res://.godot/imported/road_intersectionLine.obj-27f0f0dbfbab5bcdf37f9c36567d285e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

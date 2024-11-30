@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://k2vvkgejf3dn"
+path="res://.godot/imported/detail_umbrella.obj-6f6a3c5e6eaab9f27f92c2c8acd81894.mesh"
+
+[deps]
+
+files=["res://.godot/imported/detail_umbrella.obj-6f6a3c5e6eaab9f27f92c2c8acd81894.mesh"]
+
+source_file="res://Assets/Buildings/detail_umbrella.obj"
+dest_files=["res://.godot/imported/detail_umbrella.obj-6f6a3c5e6eaab9f27f92c2c8acd81894.mesh", "res://.godot/imported/detail_umbrella.obj-6f6a3c5e6eaab9f27f92c2c8acd81894.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

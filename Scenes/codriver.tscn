@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://qtmd6rxqlv1q"]
 
-[ext_resource type="Script" path="res://Scenes/codriver.gd" id="1_y3wej"]
+[ext_resource type="Script" path="res://Scripts/Codriver.gd" id="1_y3wej"]
 
 [node name="Codriver" type="Node3D"]
 script = ExtResource("1_y3wej")

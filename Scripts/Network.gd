@@ -19,6 +19,7 @@ func _ready():
 #*************************************#
 @export var player_name: String = "default player"
 @export var play_roll: Client.PlayRoll = Client.PlayRoll.Driver
+@export var team_mate_id: int
 
 func connect_to_server():
 	var peer = ENetMultiplayerPeer.new()
@@ -98,14 +99,22 @@ func register_clinet(player_name: String, roll: Client.PlayRoll):
 		print("server: register_clinet")
 		server_regist_client(multiplayer.get_remote_sender_id(), player_name, roll)
 
-@rpc()
+@rpc("reliable")
 func load_map(team_strs: Array):
 	print("load_map", teams)
 	var teams = []
 	for team_str in team_strs:
-		teams.append(str_to_var(team_str))
+		var team = str_to_var(team_str)
+		if team[0]._network_id == multiplayer.get_unique_id():
+			self.team_mate_id = team[1]._network_id
+		if team[1]._network_id == multiplayer.get_unique_id():
+			self.team_mate_id = team[0]._network_id
+		teams.append(team)
 	self.teams = teams
-	SceneManager.change_scene("map1")
+	if self.play_roll == Client.PlayRoll.Driver:
+		SceneManager.change_scene("map1")
+	else:
+		SceneManager.change_scene("codriver")
 
 @rpc("any_peer", "reliable")
 func ready():
@@ -116,8 +125,11 @@ func game_start():
 	pass
 
 @rpc("any_peer", "reliable")
-func direct(direction, strength, flags):
-	pass
+func direct(to_send_pacenote: String):
+	print("I'm the %s my name is %s and I recv_direct" % [self.play_roll, self.player_name])
+	print(to_send_pacenote)
+	var to_send_pacenote_object = str_to_var(to_send_pacenote)
+	print(to_send_pacenote_object)
 
 @rpc("any_peer", "unreliable")
 func car_move(position: Vector3, rotation: Vector3):

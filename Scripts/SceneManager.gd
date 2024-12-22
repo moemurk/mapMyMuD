@@ -4,6 +4,7 @@ extends Node
 var scene_map = {
 	"lobby": preload("res://Scenes/lobby.tscn"),
 	"map1": preload("res://Scenes/world.tscn"),
+	"codriver": preload("res://Scenes/codriver.tscn"),
 }
 
 var current_scene = null
